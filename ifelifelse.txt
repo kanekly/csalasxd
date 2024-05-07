@@ -1,0 +1,49 @@
+# bekérés: dolgozat pontószáma (0-100), egész
+pont=int(input("Kérem a pontszámot: "))
+
+# döntés: osztályzat (1-5)
+# elégtelen: 0-49
+# elégséges: 50-59
+# közepes: 60-69 
+#jó: 70-79
+#jeles: 80-100
+
+# több önálló IF (Elif, Else nélkül)
+if pont>=0 and pont<=49:
+    print("elégtelen")
+if pont>=50 and pont<=59:
+    print("elégséges")
+if pont>=60 and pont<=69:
+    print("közepes")
+if pont>=70 and pont<=79:
+    print("jó")
+if pont>=80 and pont<=100:
+    print("jeles")
+
+# 1db if elif else
+
+if pont>=0 and pont<=49:
+    print("elégtelen")
+elif pont>=50 and pont<=59:
+    print("elégséges")
+elif pont>=60 and pont<=69:
+    print("közepes")
+elif pont>=70 and pont<=79:
+    print("jó")
+else:
+    print("jeles")
+
+# 1db if elif else 2.
+
+if pont<=49:
+    print("elégtelen")
+elif pont<=59:
+    print("elégséges")
+elif pont<=69:
+    print("közepes")
+elif pont<=79:
+    print("jó")
+else:
+    print("jeles")
+
+

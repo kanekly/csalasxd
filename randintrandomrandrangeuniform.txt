@@ -1,0 +1,13 @@
+from random import *
+
+
+egészszám=randint(10,100)
+print(egészszám)
+
+valósszám=random()
+print(valósszám)
+
+egészszám=randrange(10,100)
+
+valósszám=uniform(3.4,5.8)
+print(valósszám)

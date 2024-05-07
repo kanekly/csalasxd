@@ -1,0 +1,23 @@
+from random import*
+
+lehetőségek_nem=["fiú","lány"]
+lehetőségek_osztály=["A","B","C","D","NyI","NyG"]
+
+diákok_nem=[]
+diákok_jegy=[]
+diákok_osztály=[]
+évfolyamlétszám=randint(90,130)
+
+for i in range(évfolyamlétszám):
+    diákok_nem.append(choice(lehetőségek_nem))
+    diákok_jegy.append(randint(1,5))
+    diákok_osztály.append(choice(lehetőségek_osztály))
+
+print(diákok_nem)
+print(diákok_jegy)
+
+print(f"évfolyamlétszám={évfolyamlétszám} fő")
+
+
+for i in range(évfolyamlétszám):
+    print(f"{diákok_osztály[i]:4} {diákok_nem[i]:5} {diákok_jegy[i]}")

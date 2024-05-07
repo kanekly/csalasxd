@@ -1,0 +1,22 @@
+nevek=["Kata","Béla","Zsolt","Ferenc"]
+magasságok=[168,179,173,162]
+
+for i in range(4):
+    print(f"{nevek[i]:8} {magasságok[i]}")
+
+print()
+
+nevek.sort()
+for i in range(4):
+    print(f"{nevek[i]:8} {magasságok[i]}")
+
+print()
+
+nevek=["Kata","Béla","Zsolt","Ferenc"]
+magasságok=[168,179,173,162]
+
+diákok=list(zip(nevek,magasságok))
+print(diákok)
+diákok.sort()
+for i in range(4):
+    print(f"{diákok[i][0]:8}{diákok[i][1]}")

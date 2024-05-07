@@ -1,0 +1,43 @@
+lehetőségek_helyszín = [
+    "Győr",
+    "Gödöllő",
+    "Pécs",
+    "Budapest",
+    "Kecskemét",
+    "Pápa",
+    "Tatabánya",
+    "Bonyhád",
+    "Szolnok"
+]
+
+lehetőségek_időpont = [
+    "06.03",
+    "06.22",
+    "09.16",
+    "10.08",
+    "09.30",
+    "09.02",
+    "05.13",
+    "05.21",
+    "07.16",
+    "12.07"
+]
+
+
+from random import *
+sorszám=randint(0,len(lehetőségek_helyszín)-1)
+print(f"{lehetőségek_helyszín[sorszám]} {lehetőségek_időpont[sorszám]}")
+
+versenyek=list(zip(lehetőségek_helyszín,lehetőségek_időpont))
+
+print(lehetőségek_helyszín)
+print(lehetőségek_időpont)
+print(versenyek)
+
+
+print(f"1.veseny: {versenyek[0][0]}")
+print(f"1.veseny: {versenyek[0][1]}")
+verseny=choice(versenyek)
+print(verseny)
+print(f"Helyszín: {verseny[0]}")
+print(f"Időpont: {verseny[1]}")

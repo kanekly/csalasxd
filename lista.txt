@@ -1,0 +1,26 @@
+diákok=[
+    ["Kata",160],
+    ["Béla",180],
+    ["Feri",189],
+    ["Laci",178],
+    ["Evelin",162],
+]
+
+print("Teljes lista:")
+print(diákok)
+
+print("1.diák")
+print(diákok[0])
+
+print(f"1. diák neve: {diákok[0][0]}")
+print(f"1. diák magassága: {diákok[0][1]}")
+
+print("Utolsó diák")
+print(diákok[4])
+print(f"utolsó diák neve: {diákok[4][0]}")
+print(f"utolsó diák magassága: {diákok[4][1]}")
+print()
+
+print("Táblázatosan:")
+for i in range(5):
+    print(f"{diákok[i][0]:8}{diákok[i][1]}")

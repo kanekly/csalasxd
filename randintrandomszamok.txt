@@ -1,0 +1,13 @@
+# 600diák
+# évfolyam: 9-12 osztáy A B C D
+
+lehetőségek_osztályok=["A","B","C","D"]
+
+from random import randint
+diákok=[]
+
+for i in range(600):
+    évfolyam=randint(9,12)
+    véletlenszám=randint(0,3)
+    diákok.append(str(évfolyam)+ "."+ lehetőségek_osztályok[véletlenszám])
+print(diákok)

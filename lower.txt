@@ -1,0 +1,14 @@
+# bekérés: egy betű
+betű=input("Kérek egy betűt: ")
+
+# döntés: magánhangzó (angol ABC) vagy mássalhangzó
+# magánhangzók: a i e o u 
+# (nem értelmezett a tól z ig)
+# felsorolás!!!
+betű=betű.lower() # véglegesen ksibetű lesz a begépelt
+if betű=="a" or betű=="i" or betű=="e" or betű=="o" or betű=="u":
+    print("magánhangzó")
+else:
+    print("mássalhangzó")
+
+if betű=="a" or betű="á" or betű=="i" or betű="í" or betű=="e" or betű="é" or betű=="o" or betű="ó" or betű=="u" or betű="ú" or betű="ü" or betű="ű":

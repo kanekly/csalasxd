@@ -1,0 +1,18 @@
+1. #Kérj be egy autómárkát!
+2. #Határozd meg a megadott márka alapján annak országát:
+	#(a megoldás során gondoskodj arról, hogy a kis- és nagybetű ne számítson)
+	#német: audi, bmw, mercedes, vw, porshe
+	#francia: peugeot, renault, citroen
+	#japán: toyota, nissan, honda, mitsubishi, mazda, lexus
+3. #Írd ki az ország nevét, ha meghatározható! Ha nem, akkor írd ki az "ismeretlen" szót!
+
+automarka=input("Kérek egy autómárkát: ")
+
+if automarka.lower()=="audi" or automarka.lower()=="bmw" or automarka.lower()=="mercedes" or automarka.lower()=="vw" or automarka.lower()=="porshe" :
+    print("a márka német")
+elif automarka.lower()=="peugeot" or automarka.lower()=="renault" or automarka.lower()=="citroen":
+    print("a márka francia")
+elif automarka.lower()=="toyota" or automarka.lower()=="nissan" or automarka.lower()=="honda" or automarka.lower()=="mitsubishi" or automarka.lower()=="mazda" or automarka.lower()=="lexus":
+    print("a márka japán")
+else:
+    print("ismeretlen")

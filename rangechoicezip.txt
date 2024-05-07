@@ -1,0 +1,22 @@
+utónevek=["Kati","Béla","Éva","Feri","Jocó","Barnabás"]
+nemek=["lány","fiú","lány","fiú","fiú","fiú"]
+
+vezetéknevek=["Kovács","Kis","Nagy","Horváth","Varga"]
+
+from random import*
+
+név=[]
+nem=[]
+
+utónevek_nemek=list(zip(utónevek, nemek))
+
+for i in range(31):
+    vnév=choice(vezetéknevek)
+    adat=choice(utónevek_nemek)
+    knév=adat[0]
+    név.append(vnév + " " + knév)
+    nem.append(adat[1])
+
+névmaxhossz= len(max(név,key=len))
+for i in range(31):
+    print(f"{név[i]:{névmaxhossz}}  {nem[i]}")

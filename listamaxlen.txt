@@ -1,0 +1,85 @@
+# lehetőségek
+lehetőségek_sportoló = [
+    "Kapuy Ádám",
+    "Verő Dávid",
+    "Tóth Bence",
+    "Gottwald Gergely",
+    "Zemen Zalán",
+    "Juhász Máté",
+    "Bokros Bulcsú",
+    "Takács Levente",
+    "Gottwald Ábel",
+    "Zsiga Dániel",
+    "Csete Hunor",
+    "Ksúz Domonkos",
+    "Rádly Csongor",
+    "Szalai Lukács",
+    "Proháczik János",
+    "Bokor Ámon",
+    "Zagyva Balázs",
+    "Árpád Attila",
+    "Lukács Barnabás Levente"
+]
+
+lehetőségek_helyszín = [
+    "Győr",
+    "Gödöllő",
+    "Pécs",
+    "Budapest",
+    "Kecskemét",
+    "Pápa",
+    "Tatabánya",
+    "Bonyhád",
+    "Szolnok"
+]
+
+lehetőségek_időpont = [
+    "06.03",
+    "06.22",
+    "09.16",
+    "10.08",
+    "09.30",
+    "09.02",
+    "05.13",
+    "05.21",
+    "07.16",
+    "12.07"
+]
+
+# verseny helyszín és időpont értelmezése, kapcsolata
+# Győr - 06.03, Gödöllő - 06.22
+# A helyszín sorszáma (index) és az időpont sorszáma (index) megegyezik!
+
+# adatlisták
+verseny_sportoló = []   # választás a lehetőségek közül
+verseny_helyszín = []   # választás a lehetőségek közül
+verseny_időpont = []    # választás a lehetőségek közül a helyszín alapján
+verseny_eredmény = []   # véletlen valós szám 3.2 és 6.4 között
+
+from random import *    # randint, randrange, uniform, random, choice
+eredmények_száma = randint(250, 300)     # n,   >=250 and <=300
+
+# adatlisták feltöltése
+for i in range(eredmények_száma):
+    # i: kezdet=0,  i<eredmények_száma,  lépésköz: +1
+    verseny_sportoló.append(choice(lehetőségek_sportoló))
+
+    # helyszín alapján időpont !!!  -> CHOICE nem jó a 2 lista miatt
+    # helyszín sorszáma véletlenszám: 0-tól utolsóig elemig
+    # utolsó elem sorszáma = len(lista)-1
+    sorszám = randint(0, len(lehetőségek_helyszín)-1)
+    # ahányadik sorszámú helyszín, annyiadik sorszám időpont kell
+    verseny_helyszín.append(lehetőségek_helyszín[sorszám])
+    verseny_időpont.append(lehetőségek_időpont[sorszám])
+
+    verseny_eredmény.append(uniform(3.2, 6.4))
+
+# kiírás táblázatosan
+#leghosszab sportolo nev meghatarozasa
+# print(max(lehetőségek_sportoló, key=len))
+# print(len(max(lehetőségek_sportoló, key=len)))
+maxhossz_sportoló=(len(max(lehetőségek_sportoló, key=len)))
+maxhossz_helyszín=(len(max(lehetőségek_helyszín, key=len)))
+
+for i in range(eredmények_száma):
+    print(f"{verseny_sportoló[i]:{maxhossz_sportoló+2}}{verseny_helyszín[i]:{maxhossz_helyszín+2}}{verseny_időpont[i]:{5+2}}{verseny_eredmény[i]:.2f}")
